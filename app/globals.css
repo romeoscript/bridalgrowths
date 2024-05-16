@@ -1,33 +1,78 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  font-family: "Crimson Pro", serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: white;
+    --background-start-rgb: white;
+    --background-end-rgb: white;
+    font-family: "Crimson Pro", serif!important;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  font-family: "Crimson Pro", serif;
+  overflow-x: hidden;
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
-
+html{
+  font-family: "Crimson Pro", serif;
+  overflow-x: hidden;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+
+@media (min-width: 1024px) { 
+  .center-max-width {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+  }
+
+  .content-container {
+    max-width: 1440px;
+    width: 100%; 
+    margin: auto; 
+  }
+}
+
+
+.sticky-section {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sticky-section div {
+  overflow-y: auto;
+  height: 100%;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.sticky-section div::-webkit-scrollbar { /* WebKit */
+  width: 0;
+  height: 0;
+}
+
