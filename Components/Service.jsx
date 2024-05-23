@@ -2,6 +2,7 @@ import React from 'react';
 
 import ServiceCard from './ServiceCard';
 import { people } from '@/public/Assets/';
+import Image from 'next/image';
 
 const Service = () => {
 
