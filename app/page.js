@@ -1,7 +1,5 @@
 "use client";
-import { useEffect, Suspense, lazy } from "react";
-import Aos from "aos";
-import "aos/dist/aos.css";
+import { Suspense, lazy } from "react";
 
 // Lazy load components
 const Hero = lazy(() => import("@/Components/Hero"));
@@ -16,15 +14,6 @@ const Loading = lazy(() => import("@/Components/Loading"));
 import { amazon, wallmart, google } from "@/public/Assets";
 
 export default function Home() {
-  useEffect(() => {
-    if (!Aos.initialized) {
-      Aos.init({
-        duration: 800,
-        once: false,
-      });
-      Aos.initialized = true; // Ensure Aos is only initialized once
-    }
-  }, []);
 
   return (
     <Suspense fallback={<Loading />}>
