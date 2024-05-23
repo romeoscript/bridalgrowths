@@ -13,7 +13,7 @@ const Nav = () => {
         setIsModalOpen(false);
     };
     return (
-        <div className='bg-black h-[80px] flex justify-around items-center fixed w-full top-0 px-[1rem]'>
+        <div className='bg-black h-[80px] flex justify-around items-center z-100 fixed w-full top-0 px-[1rem]' style={{zIndex:100}}>
             <aside>
                 <img src={logo.src} alt="" className='max-md:w-3/5' />
             </aside>

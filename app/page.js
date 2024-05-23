@@ -14,11 +14,15 @@ export default function Home() {
       <Partners />
       <Service />
       <Result />
-      <div className="grid grid-cols-3 gap-4 p-[2rem] relative bg-white z-10">
-        <ParallaxCard />
-        <ParallaxCard />
-        <ParallaxCard />
-      </div>
+      <section className="relative bg-white z-10">
+        <h2 className="text-3xl font-bold p-[1rem] text-center text-gray-800 mb-4">Case Studies</h2>
+        <p className="text-center mb-[3rem]">Here are the best features that makes margin the most powerful, fast and user-friendly platform.</p>
+        <div className="grid md:grid-cols-3 gap-4 px-[2rem] pb-[3rem] ">
+          <ParallaxCard />
+          <ParallaxCard />
+          <ParallaxCard />
+        </div>
+      </section>
       <People />
     </main>
   );

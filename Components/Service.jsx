@@ -36,12 +36,16 @@ const Service = () => {
                     <div className='flex flex-col gap-[2rem] justify-between h-full'>
                         <ServiceCard
                             title="Keyword Research"
-                            text='Identifying relevant keywords for your business to optimize website content.'
+                            text='Imagine having a roadmap that shows you exactly what your customers are searching for. With our keyword research
+                            services, you’ll get a comprehensive list of keywords and phrases that your target audience is using to find businesses like
+                            yours. This is the foundation of your success, and we’ll help you build it from the ground up.'
                             iconText='magnify'
                             className='service-card' />
                         <ServiceCard
                             title="Technical SEO"
-                            text='Optimizing website structure, content, and HTML elements to improve search engine rankings.'
+                            text='You’ve got a great website, but is it optimized for search engines? Our technical SEO services will ensure that your website is
+                            technically sound, making it easier for search engines to crawl, index, and rank your site. This means more visibility, more
+                            traffic, and more revenue for your business.'
                             iconText='seo'
                             className='service-card' />
                     </div>
@@ -54,23 +58,30 @@ const Service = () => {
                         <ServiceCard
                             iconText="optimize"
                             title="On & Off Page Optimization"
-                            text="Optimizing website structure, content, and HTML elements to improve search engine rankings.
-                        Building backlinks from authoritative websites to increase domain authority and improve search visibility."
+                            text="On-page optimization is just the beginning. We’ll also help you build high-quality backlinks from authoritative sources,
+                            increasing your website’s authority and driving even more traffic to your site. With the use of our on and off-page optimization
+                            services, you’ll dominate search results and leave your competitors in the dust."
                             className='service-card' />
                         <ServiceCard
-                            title="Content Marketing"
+                            title="Content Marketing Strategy Development"
                             iconText="content"
-                            text="Creating high-quality, relevant content to attract and engage target audiences while also improving search rankings."
+                            text="Content marketing is more than just blogging. It’s a strategic approach to attracting and engaging your target audience. Our
+                            content marketing strategy development services will help you create a content marketing plan that resonates with your
+                            audience, builds trust and credibility, and drives revenue."
                             className='service-card' />
                     </div>
                     <div className='flex flex-col gap-[2rem] justify-between h-full mt-[2rem]'>
                         <ServiceCard
-                            text="Creating a comprehensive plan aligned with business goals and target audience."
+                            text="Our strategic development services will help you create a comprehensive marketing plan that aligns with your business
+                            goals. We will help you identify your target audience, develop a unique value proposition, and create a marketing strategy
+                            that drives revenue and growth."
                             title="Strategy development"
                             iconText="strategy"
                             className='service-card' />
                         <ServiceCard
-                            text="Designing visually appealing and engaging email templates."
+                            text="You’ve got a list of leads, but are you converting them into customers? Our email campaign design services will help you
+                            create targeted, personalized email campaigns that nurture your leads and drive conversions. With our expertise, you’ll turn
+                            your leads into loyal customers who will keep coming back for more."
                             title="Email Campaign Design"
                             iconText="campaign"
                             className='service-card' />
