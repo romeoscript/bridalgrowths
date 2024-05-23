@@ -1,22 +1,13 @@
-import React, { useEffect, useRef } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React from 'react';
+
 import ServiceCard from './ServiceCard';
 import { people } from '@/public/Assets/';
 
 const Service = () => {
-    const sectionRef = useRef(null);
 
-    useEffect(() => {
-        AOS.init({
-            duration: 1000, // Animation duration in milliseconds
-            easing: 'ease-in-out', // Easing function
-            once: true, // Whether animation should happen only once
-        });
-    }, []);
-
+ 
     return (
-        <section id='section' ref={sectionRef} className='sticky-section md:my-[4rem]'>
+        <section id='section'  className='sticky-section md:my-[4rem]'>
             <div className='relative py-[2rem] md:px-[4rem] w-4/5 m-auto h-screen'>
                 <aside className='md:flex items-start justify-between first-aside gap-[4rem]'>
                     <div className='flex flex-col gap-[2rem] justify-between h-full'>
@@ -27,7 +18,7 @@ const Service = () => {
                             yours. This is the foundation of your success, and we’ll help you build it from the ground up.'
                             iconText='magnify'
                             className='service-card'
-                            data-aos="fade-up"
+                           
                         />
                         <ServiceCard
                             title="Technical SEO"
@@ -36,8 +27,7 @@ const Service = () => {
                             traffic, and more revenue for your business.'
                             iconText='seo'
                             className='service-card'
-                            data-aos="fade-up"
-                            data-aos-delay="200"
+                         
                         />
                     </div>
                     <div className='flex-shrink-0'>
@@ -53,8 +43,7 @@ const Service = () => {
                             increasing your website’s authority and driving even more traffic to your site. With the use of our on and off-page optimization
                             services, you’ll dominate search results and leave your competitors in the dust."
                             className='service-card'
-                            data-aos="fade-up"
-                            data-aos-delay="400"
+                         
                         />
                         <ServiceCard
                             title="Content Marketing Strategy Development"
@@ -63,14 +52,12 @@ const Service = () => {
                             content marketing strategy development services will help you create a content marketing plan that resonates with your
                             audience, builds trust and credibility, and drives revenue."
                             className='service-card'
-                            data-aos="fade-up"
-                            data-aos-delay="600"
+                          
                         />
                     </div>
                     <div className='flex flex-col gap-[2rem] justify-between h-full mt-[2rem]'>
                         <ServiceCard
-                            data-aos="fade-up"
-                            data-aos-delay="800"
+                    
                             text="Our strategic development services will help you create a comprehensive marketing plan that aligns with your business
                             goals. We will help you identify your target audience, develop a unique value proposition, and create a marketing strategy
                             that drives revenue and growth."
@@ -79,8 +66,7 @@ const Service = () => {
                             className='service-card'
                         />
                         <ServiceCard
-                            data-aos="fade-up"
-                            data-aos-delay="1000"
+                          
                             text="You’ve got a list of leads, but are you converting them into customers? Our email campaign design services will help you
                             create targeted, personalized email campaigns that nurture your leads and drive conversions. With our expertise, you’ll turn
                             your leads into loyal customers who will keep coming back for more."
