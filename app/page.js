@@ -1,14 +1,14 @@
 "use client";
 import { Suspense, lazy } from "react";
+import Hero from "@/Components/Hero";
+import Partners from "@/Components/Partners";
+import People from "@/Components/People";
+import Result from "@/Components/Result";
+import ParallaxCard from "@/Components/parrallax";
+import Service from "@/Components/Service";
+import Loading from "@/Components/Loading";
 
-// Lazy load components
-const Hero = lazy(() => import("@/Components/Hero"));
-const Partners = lazy(() => import("@/Components/Partners"));
-const People = lazy(() => import("@/Components/People"));
-const Result = lazy(() => import("@/Components/Result"));
-const ParallaxCard = lazy(() => import("@/Components/parrallax"));
-const Service = lazy(() => import("@/Components/Service"));
-const Loading = lazy(() => import("@/Components/Loading"));
+
 
 // Import assets
 import { amazon, wallmart, google } from "@/public/Assets";
