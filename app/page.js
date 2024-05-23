@@ -6,7 +6,7 @@ import People from "@/Components/People";
 import Result from "@/Components/Result";
 import ParallaxCard from "@/Components/parrallax";
 import Service from "@/Components/Service";
-import Loading from "@/Components/Loading";
+
 
 
 
@@ -16,7 +16,7 @@ import { amazon, wallmart, google } from "@/public/Assets";
 export default function Home() {
 
   return (
-    <Suspense fallback={<Loading />}>
+    <Suspense >
       <main>
         <Hero />
         <Partners />
