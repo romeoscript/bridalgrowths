@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 
-// Create a transporter for sending emails
+
 const transporter = nodemailer.createTransport({
   host: "smtp.zoho.com",
   secure: true,
