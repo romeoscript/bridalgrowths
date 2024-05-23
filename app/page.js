@@ -16,7 +16,7 @@ import { amazon, wallmart, google } from "@/public/Assets";
 export default function Home() {
 
   return (
-    <Suspense >
+
       <main>
         <Hero />
         <Partners />
@@ -57,6 +57,6 @@ export default function Home() {
         </section>
         <People />
       </main>
-    </Suspense>
+
   );
 }
