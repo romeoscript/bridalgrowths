@@ -2,16 +2,16 @@
 import React, { useState } from 'react'
 import { logo } from '@/public/Assets/';
 import Icon from '@/Reusable/Icons';
-import Modaly from '@/Reusable/modal';
+import dynamic from 'next/dynamic';
+
+const Modaly = dynamic(() => import('@/Reusable/modal'), { ssr: false });
 
 const Nav = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const showModal = () => {
         setIsModalOpen(true);
     };
-    const handleCancel = () => {
-        setIsModalOpen(false);
-    };
+
     return (
         <div className='bg-black h-[80px] flex justify-around items-center z-100 fixed w-full top-0 px-[1rem]' style={{zIndex:100}}>
             <aside>
