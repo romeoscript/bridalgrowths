@@ -22,7 +22,7 @@ const Nav = () => {
                     <span>Case studies</span>
                     <Icon type='arrowslant' />
                 </button>
-                <button className='bg-[#176FF5] px-[2rem] py-[0.5rem] max-md:py-[0.3rem] max-md:px-[0.9rem] rounded-full text-white' onClick={showModal}>
+                <button className='bg-[#176FF5] px-[2rem] py-[0.5rem] max-md:py-[0.3rem] max-md:px-[0.9rem] rounded-full text-white max-md:w-[120px]' onClick={showModal}>
                     Get a Quote
                 </button>
                 <Modaly isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
