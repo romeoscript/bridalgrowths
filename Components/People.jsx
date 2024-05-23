@@ -4,11 +4,7 @@ import Icon from '@/Reusable/Icons'
 
 const People = () => {
     const clients = [
-        {
-            name: 'John Hanny',
-            testimonial: 'Working with this team has been a transformative experience. Their expertise and dedication are unmatched.',
-            image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
+
         {
             name: 'Jane Smith',
             testimonial: 'Their attention to detail and commitment to excellence made all the difference in our project.',
@@ -28,6 +24,11 @@ const People = () => {
             name: ' Diana Green',
             testimonial: 'The final product exceeded my expectations and I couldn’t be happier with the outcome.',
             image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=faces&fit=crop&w=256&h=256&q=80'
+        },
+        {
+            name: 'John Hanny',
+            testimonial: 'Working with this team has been a transformative experience. Their expertise and dedication are unmatched.',
+            image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             name: 'Chris Lee',

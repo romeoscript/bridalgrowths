@@ -8,7 +8,7 @@ const Modaly = ({isModalOpen, setIsModalOpen}) => {
     };
     return (
         <>
-            <Modal title="Basic Modal" open={isModalOpen} onCancel={handleCancel}>
+            <Modal  open={isModalOpen} onCancel={handleCancel}>
                 <Quote />
             </Modal>
         </>

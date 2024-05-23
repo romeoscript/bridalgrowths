@@ -3,7 +3,7 @@ import React from 'react'
 
 const Partners = () => {
     return (
-        <section className='my-[4rem]'>
+        <section className='md:my-[4rem] my-[1rem]'>
             <p className='text-center uppercase'>our partners</p>
             <div className='flex gap-4 items-center py-[2rem]  justify-around w-4/5 m-auto'>
                 <Icon type='convert' />

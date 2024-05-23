@@ -25,7 +25,7 @@ const onChange = (e) => {
 const Quote = () => {
     return (
         <div className='bg-white p-[2rem] rounded-md'>
-            <h2 className='text-5xl font-bold font-crimson my-[1rem]'>Let’s discuss your project</h2>
+            <h2 className='md:text-5xl text-3xl font-bold font-crimson my-[1rem]'>Let’s discuss your project</h2>
             <div>
                 <label htmlFor="">Describe the project</label>
                 <TextArea className='p-[0.6rem]' showCount maxLength={100} onChange={onChange} placeholder="can resize" />
