@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import { humanPhoto } from '@/public/Assets';
+
 
 
 const ParallaxCard = ({ title, text, Image }) => {

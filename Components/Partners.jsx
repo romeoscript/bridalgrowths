@@ -1,5 +1,6 @@
-import Icon from '@/Reusable/Icons'
+
 import React from 'react'
+import Icon from '@/Reusable/Icons'
 
 const Partners = () => {
     return (
