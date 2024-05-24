@@ -2,7 +2,7 @@ import nodemailer from "nodemailer";
 
 
 const transporter = nodemailer.createTransport({
-  host: "smtp.zoho.com",
+  host: "smtp.office365.com",
   secure: true,
   port: 465,
   auth: {

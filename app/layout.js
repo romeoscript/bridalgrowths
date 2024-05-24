@@ -5,6 +5,7 @@ import Nav from "@/Components/Nav";
 import AOS from "aos";
 import 'aos/dist/aos.css';
 import { Suspense } from 'react'
+import Loader from "@/Components/Loader";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,7 +23,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div className="center-max-width">
           <div className="content-container">
-            <Suspense>
+            <Suspense fallback={<Loader />}>
               {children}
             </Suspense>
           </div>

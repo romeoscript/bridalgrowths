@@ -16,6 +16,8 @@
     "nodemailer": "^6.9.13",
     "react": "^18",
     "react-dom": "^18",
+    "react-spinners": "^0.13.8",
+    "respinner": "^4.0.1",
     "styled-components": "^6.1.11"
   },
   "devDependencies": {

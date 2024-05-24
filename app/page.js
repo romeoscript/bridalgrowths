@@ -14,6 +14,7 @@ import 'aos/dist/aos.css';
 
 // Import assets
 import { amazon, wallmart, google } from "@/public/Assets";
+import Loader from "@/Components/Loader";
 
 export default function Home() {
   useEffect(() => {
