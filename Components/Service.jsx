@@ -7,9 +7,9 @@ const Service = () => {
 
  
     return (
-        <section id='section'  className='sticky-section md:my-[4rem] z-2000' style={{zIndex:300}}>
+        <section id='section'  className='sticky-section md:my-[4rem] z-2000' >
             <div className='relative py-[2rem] md:px-[4rem] w-4/5 m-auto h-auto'>
-                <aside className='md:flex items-start justify-between first-aside gap-[4rem]'>
+                <aside className='md:flex items-start justify-between first-aside gap-[4rem]' >
                     <div className='flex flex-col gap-[2rem] justify-between h-full'>
                         <ServiceCard
                             title="Keyword Research"
@@ -35,7 +35,7 @@ const Service = () => {
                     </div>
                 </aside>
                 <aside className='md:flex items-start gap-[6rem] my-[2rem] second-aside'>
-                    <div className='flex flex-col gap-[2rem] justify-between h-full'>
+                    <div className='flex flex-col gap-[2rem] justify-between h-full' >
                         <ServiceCard
                             iconText="optimize"
                             title="On & Off Page Optimization"

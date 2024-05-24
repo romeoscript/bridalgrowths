@@ -3,7 +3,7 @@ import Quote from './Quote'
 
 const Result = () => {
     return (
-        <div className='bg-[#D8E6FD] flex justify-around max-md:flex-col p-[1rem] gap-4 md:p-[2.5rem] 0-[1rem] relative mt-[5rem]'>
+        <div className='bg-[#D8E6FD] flex justify-around max-md:flex-col p-[1rem] gap-4 md:p-[2.5rem] 0-[1rem] relative mt-[5rem]' >
             <aside className='basis-[30%] '>
                 <h2 className='text-[#0946AE] md:text-4xl text-3xl font-bold'>Don’t Miss Out on This Opportunity to Transform Your Business</h2>
                 <div className='mt-[1rem]'>
