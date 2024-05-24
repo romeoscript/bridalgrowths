@@ -1,15 +1,31 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import ServiceCard from './ServiceCard';
 import { people } from '@/public/Assets/';
-import Image from 'next/image';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Service = () => {
 
- 
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+        const sectionElement = sectionRef.current;
+
+        gsap.to(sectionElement, {
+            scrollTrigger: {
+                trigger: sectionElement,
+                start: 'top top',
+                end: 'bottom top',
+                pin: true,
+                pinSpacing: false,
+                markers: true, // Remove this line in production
+            }
+        });
+    }, []);
     return (
-        <section id='section'  className='sticky-section md:my-[4rem]'>
-            <div className='relative py-[2rem] md:px-[4rem] w-4/5 m-auto h-screen'>
+        <section id='section' ref={sectionRef}  className='sticky-section md:my-[4rem] z-2000' style={{zIndex:300}}>
+            <div className='relative py-[2rem] md:px-[4rem] w-4/5 m-auto h-auto'>
                 <aside className='md:flex items-start justify-between first-aside gap-[4rem]'>
                     <div className='flex flex-col gap-[2rem] justify-between h-full'>
                         <ServiceCard
