@@ -26,7 +26,9 @@ export default function Home() {
   return (
 
     <main>
-      <Hero />
+     <div data-aos="fade-up">
+     <Hero />
+     </div>
       <Partners />
       <Service />
       <Result />
