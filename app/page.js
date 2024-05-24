@@ -22,7 +22,9 @@ export default function Home() {
       duration: 800,
       once: false,
     });
-  }, [])
+    AOS.refresh(); // Refresh AOS to detect new elements
+  }, []);
+  
   return (
 
     <main>
