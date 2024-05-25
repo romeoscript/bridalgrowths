@@ -1,8 +1,8 @@
 import nodemailer from "nodemailer";
 
-
+// Create a transporter for sending emails
 const transporter = nodemailer.createTransport({
-  host: "smtp.office365.com",
+  host: "smtp.zoho.com",
   secure: true,
   port: 465,
   auth: {

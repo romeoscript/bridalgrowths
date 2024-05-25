@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { Input, Select, message } from 'antd';
+import { LoadingOutlined } from '@ant-design/icons';
 const { TextArea } = Input;
 
 const options = [
@@ -19,11 +20,14 @@ const Quote = () => {
         yourName: '',
     });
 
+    const [loading, setLoading] = useState(false);
+
     const handleChange = (value, field) => {
         setFormData({ ...formData, [field]: value });
     };
 
     const handleSubmit = async () => {
+        setLoading(true);
         try {
             const response = await fetch('/api/quote', {
                 method: 'POST',
@@ -35,12 +39,21 @@ const Quote = () => {
 
             if (response.status === 200) {
                 message.success('Message sent successfully');
+                // Reset form data
+                setFormData({
+                    projectDescription: '',
+                    budgetRange: [],
+                    companyName: '',
+                    companyWebsite: '',
+                    yourName: '',
+                });
             } else {
                 message.error('Failed to send message');
             }
         } catch (error) {
             message.error('Failed to send message');
         }
+        setLoading(false);
     };
 
     return (
@@ -52,6 +65,7 @@ const Quote = () => {
                     className='p-[0.6rem]'
                     showCount
                     maxLength={100}
+                    value={formData.projectDescription}
                     onChange={(e) => handleChange(e.target.value, 'projectDescription')}
                     placeholder="Can resize"
                 />
@@ -62,6 +76,7 @@ const Quote = () => {
                     mode="tags"
                     style={{ width: '100%' }}
                     placeholder="Tags Mode"
+                    value={formData.budgetRange}
                     onChange={(value) => handleChange(value, 'budgetRange')}
                     options={options}
                 />
@@ -72,6 +87,7 @@ const Quote = () => {
                     className='p-[0.6rem]'
                     placeholder="Autosize height based on content lines"
                     autoSize
+                    value={formData.companyName}
                     onChange={(e) => handleChange(e.target.value, 'companyName')}
                 />
             </div>
@@ -81,6 +97,7 @@ const Quote = () => {
                     className='p-[0.6rem]'
                     placeholder="Autosize height based on content lines"
                     autoSize
+                    value={formData.companyWebsite}
                     onChange={(e) => handleChange(e.target.value, 'companyWebsite')}
                 />
             </div>
@@ -90,14 +107,16 @@ const Quote = () => {
                     className='p-[0.6rem]'
                     placeholder="Autosize height based on content lines"
                     autoSize
+                    value={formData.yourName}
                     onChange={(e) => handleChange(e.target.value, 'yourName')}
                 />
             </div>
             <button
-                className='bg-[#176FF5] px-[2rem] py-[0.5rem] rounded-full text-white'
+                className='bg-[#176FF5] w-full px-[2rem] py-[0.5rem] rounded-full text-white flex items-center justify-center'
                 onClick={handleSubmit}
+                disabled={loading}
             >
-                Send a Message
+                {loading ? <LoadingOutlined spin /> : 'Send a Message'}
             </button>
         </div>
     );
