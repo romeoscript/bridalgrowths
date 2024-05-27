@@ -29,7 +29,7 @@ const Quote = () => {
         setFormData({ ...formData, [field]: value });
     };
 
-    const handleRecaptcha = (token) => {
+    const handleCaptcha = (token) => {
         setFormData({ ...formData, recaptchaToken: token });
     };
 
@@ -128,7 +128,7 @@ const Quote = () => {
             </div>
             <ReCAPTCHA
                 sitekey="6LfH0OkpAAAAAIHTy4-vATZ24i775tZDpTvrVAeh"
-                onChange={handleRecaptcha}
+                onChange={handleCaptcha}
             />
             <button
                 className='bg-[#176FF5] w-full px-[2rem] py-[0.5rem] rounded-full text-white flex items-center justify-center'
