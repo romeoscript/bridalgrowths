@@ -127,7 +127,7 @@ const Quote = () => {
                 />
             </div>
             <ReCAPTCHA
-                sitekey="6Lf9zukpAAAAANRkcy64vlqEbSJLPm_DXM6yxy-3"
+                sitekey="6LfH0OkpAAAAAIHTy4-vATZ24i775tZDpTvrVAeh"
                 onChange={handleRecaptcha}
             />
             <button
