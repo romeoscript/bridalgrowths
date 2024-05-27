@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import { Input, Select, message } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
+import ReCAPTCHA from "react-google-recaptcha";
+
 const { TextArea } = Input;
 
 const options = [
@@ -18,6 +20,7 @@ const Quote = () => {
         companyName: '',
         companyWebsite: '',
         yourName: '',
+        recaptchaToken: '',
     });
 
     const [loading, setLoading] = useState(false);
@@ -26,7 +29,18 @@ const Quote = () => {
         setFormData({ ...formData, [field]: value });
     };
 
+    const handleRecaptcha = (token) => {
+        setFormData({ ...formData, recaptchaToken: token });
+    };
+
     const handleSubmit = async () => {
+        const { projectDescription, budgetRange, companyName, companyWebsite, yourName, recaptchaToken } = formData;
+
+        if (!projectDescription || !budgetRange.length || !companyName || !companyWebsite || !yourName || !recaptchaToken) {
+            message.error('Please complete all fields and verify reCAPTCHA');
+            return;
+        }
+
         setLoading(true);
         try {
             const response = await fetch('/api/quote', {
@@ -46,6 +60,7 @@ const Quote = () => {
                     companyName: '',
                     companyWebsite: '',
                     yourName: '',
+                    recaptchaToken: '',
                 });
             } else {
                 message.error('Failed to send message');
@@ -111,6 +126,10 @@ const Quote = () => {
                     onChange={(e) => handleChange(e.target.value, 'yourName')}
                 />
             </div>
+            <ReCAPTCHA
+                sitekey="6Lf9zukpAAAAANRkcy64vlqEbSJLPm_DXM6yxy-3"
+                onChange={handleRecaptcha}
+            />
             <button
                 className='bg-[#176FF5] w-full px-[2rem] py-[0.5rem] rounded-full text-white flex items-center justify-center'
                 onClick={handleSubmit}
