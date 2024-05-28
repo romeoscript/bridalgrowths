@@ -82,7 +82,7 @@ const Quote = () => {
                     maxLength={100}
                     value={formData.projectDescription}
                     onChange={(e) => handleChange(e.target.value, 'projectDescription')}
-                    placeholder="Can resize"
+                    placeholder="Briefly describe your project"
                 />
             </div>
             <div className='my-[1rem]'>
@@ -90,7 +90,7 @@ const Quote = () => {
                 <Select
                     mode="tags"
                     style={{ width: '100%' }}
-                    placeholder="Tags Mode"
+                    placeholder="Select your budget range"
                     value={formData.budgetRange}
                     onChange={(value) => handleChange(value, 'budgetRange')}
                     options={options}
@@ -100,7 +100,7 @@ const Quote = () => {
                 <label htmlFor="">Company’s Name</label>
                 <TextArea
                     className='p-[0.6rem]'
-                    placeholder="Autosize height based on content lines"
+                    placeholder="Enter your company’s name"
                     autoSize
                     value={formData.companyName}
                     onChange={(e) => handleChange(e.target.value, 'companyName')}
@@ -110,7 +110,7 @@ const Quote = () => {
                 <label htmlFor="">Company’s Website</label>
                 <TextArea
                     className='p-[0.6rem]'
-                    placeholder="Autosize height based on content lines"
+                    placeholder="Enter your company’s website URL"
                     autoSize
                     value={formData.companyWebsite}
                     onChange={(e) => handleChange(e.target.value, 'companyWebsite')}
@@ -120,7 +120,7 @@ const Quote = () => {
                 <label htmlFor="">Your Name</label>
                 <TextArea
                     className='p-[0.6rem]'
-                    placeholder="Autosize height based on content lines"
+                    placeholder="Enter your name"
                     autoSize
                     value={formData.yourName}
                     onChange={(e) => handleChange(e.target.value, 'yourName')}
