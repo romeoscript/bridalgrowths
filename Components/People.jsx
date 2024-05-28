@@ -1,9 +1,18 @@
-import React from 'react'
+import React,{useState} from 'react'
 import ClientCard from './ClientCard'
 import Icon from '@/Reusable/Icons'
 import { alex , john, chris, bob, diana, jane } from '@/public/Assets'
 
+import dynamic from 'next/dynamic';
+
+const Modaly = dynamic(() => import('@/Reusable/modal'), { ssr: false });
+
+
 const People = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const showModal = () => {
+        setIsModalOpen(true);
+    };
     const clients = [
 
         {
@@ -52,7 +61,8 @@ const People = () => {
             </div>
             <div className='md:w-2/5 m-auto text-center my-[5rem]'>
                 <p className='text-[#176FF5] font-crimson md:text-6xl text-4xl'>Be our Next <br /> Client</p>
-                <button className='px-[2rem] py-[0.5rem] bg-white rounded-full text-[#176FF5] my-[1rem] '>Send a Message</button>
+                <button className='px-[2rem] py-[0.5rem] bg-white rounded-full text-[#176FF5] my-[1rem] ' onClick={showModal}>Send a Message</button>
+                <Modaly isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
             </div>
             <div className='text-white  flex justify-between'>
                 <p><span>©</span>2024 Bridal Growth. All rights reserved.</p>

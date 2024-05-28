@@ -2,6 +2,7 @@
 import React from 'react'
 import Icon from '@/Reusable/Icons'
 
+
 const Partners = () => {
     return (
         <section className='md:my-[4rem] my-[1rem]'>
